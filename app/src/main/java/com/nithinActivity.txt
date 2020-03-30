@@ -1,0 +1,21 @@
+package com.e.nithin;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.TextView;
+
+public class nithin extends AppCompatActivity {
+String n="";
+TextView tv;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_nithin);
+        tv = findViewById(R.id.tv);
+        Intent intent = getIntent();
+         n = intent.getStringExtra("name");
+         tv.setText(" "+n);
+    }
+}
